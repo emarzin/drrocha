@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <meta name="keywords" content="">
+    <meta name="description" content="Minha Conta | Portal Dr. Rocha">
+    <meta name="robots" content="noindex, nofollow">
+
+    <link rel="shortcut icon" href="images/icons/favicon.ico">
+    <link rel="apple-touch-icon" href="images/icons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/icons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/icons/apple-touch-icon-114x114.png">
+
+    <title>Minha Conta</title>
+
+</head>
+
+
+<body data-spy="scroll" data-offset="400">
+
+
+<section class="headsection back-green">
+    <div class="container">
+        <h2 class="text-center text-bold margin-b0">
+            Minha Conta
+        </h2>
+    </div>
+</section>
+
+
+<section class="white-bg" style="margin-top:20px;">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12" style="width: 50%; margin-left: 25%;">
+
+                <p>
+                    Aqui você pode atualizar seu email e senha:
+                </p>
+
+                <form name="updateUserForm">
+                    <div class="form-group form-group-lg">
+                        <label for="name" class="control-label">Nome Completo </label>
+                        <input id="name" name="name" class="form-control" />
+                    </div>
+
+                    <div class="form-group form-group-lg">
+                        <label for="cpf" class="control-label">CPF</label>
+                        <input id="cpf" name="cpf" class="form-control" data-mask="000.000.000-00" disabled />
+                    </div>
+
+
+                    <div class="form-group form-group-lg">
+                        <label for="email" class="control-label">Email</label>
+                        <input id="email" type="email" name="email" class="form-control" required />
+                    </div>
+
+                    <div class="form-group form-group-lg">
+                        <label for="celular" class="control-label">
+                            WhatsApp (DDD + Número)
+                        </label>
+                        <input id="celular" type="text" name="celular" class="form-control" required />
+                    </div>
+
+                    <div class="form-group form-group-lg">
+                        <label for="password" class="control-label">Nova Senha</label>
+                        <input id="password" type="password" name="password" placeholder="crie uma nova senha" class="form-control" />
+                    </div>
+
+                    <div class="form-group form-group-lg">
+                        <label for="confirmPassword" class="control-label">Repita Nova Senha</label>
+                        <input id="confirmPassword" type="password" name="confirmPassword"
+                               placeholder="repita a nova senha" class="form-control" />
+                    </div>
+                </form>
+
+                <p id="errEmail" class="red text-bold text-center margin-b5 margin-t0"></p>
+
+                <button id="btnSave" class="btn btn-success btn-lg btn-block btn-responsive margin-b15" style="float: left;">
+                    <span id="btnSaveLabel"></span> <i id="btnSaveSpinner" class="fa fa-spinner fa-pulse fa-fw"></i>
+                </button>
+
+
+                <a id="btnGoBack" class="btn btn-danger btn-lg btn-block btn-responsive margin-b15" style="float: left; margin-left: 2%; margin-top: 0px;" >
+                    Voltar
+                </a>
+
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+<!-- CSS files -->
+{% if (env == 'development') %}
+{% for file in assets.main.css %}
+<link rel="stylesheet" href="{{ file }}">
+{% endfor %}
+{% endif %}
+
+{% if (env == 'production') %}
+<link rel="stylesheet" href="/build/css/main.min.css">
+{% endif %}
+
+<link href="https://fonts.googleapis.com/css?family=Lato:400,300,700,900" rel="stylesheet" type="text/css" />
+
+
+<!-- JS files -->
+{% if (env == 'development') %}
+{% for file in assets.main.js %}
+<script type="text/javascript" src="{{file}}"></script>
+{% endfor %}
+{% for file in assets.main.contajs %}
+<script type="text/javascript" src="{{file}}"></script>
+{% endfor %}
+{% endif %}
+
+{% if (env == 'production') %}
+<script type="text/javascript" src="/build/js/main.min.js"></script>
+<script type="text/javascript" src="/build/js/conta.min.js"></script>
+{% endif %}
+
+
+
+
+
+</body>
+
+</html>

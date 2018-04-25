@@ -1,0 +1,161 @@
+@charset "utf-8";
+/* CSS Document */
+.container {
+    width: 80%;
+}
+
+di{
+	border: 1px solid red;
+}
+
+
+.espaco{
+
+margin-bottom: 10vh;
+	border-left: 3px solid black;
+	padding-left: 10px;
+	display: block;
+}
+
+/*--------  mod1 -----------*/
+.mod1-text{
+	padding: 0.5% 8%;
+	font-size: 17px;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    color: #666;
+    line-height: 22px !important;
+    text-align: center;
+	
+}
+.mod1-text-bloco{
+    font-size: 2.4vh;
+    font-family: "Dosis", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 22px !important;
+    background-color: #febd40;
+    width: auto;
+   
+    display: inline-block;
+	padding: 1.5vh 4vh;
+ 
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-bottom: -1px !important;
+}
+hr{
+    padding-top: -10px;
+    padding-bottom: 0px;
+    border-top-width: 5px;
+    border-top-style: solid;
+    border-top-color: #febd40;
+    border-bottom-width: px;
+    border-bottom-style: solid;
+    border-bottom-color:#febd40;
+	margin-top: -20px;
+	margin-bottom: 10vh;
+}
+hr.hr-2{
+
+	margin-top: -22px;
+
+}
+/*--------  /mod1 -----------*/
+
+
+/*--------  mod2 -----------*/
+.btn{
+margin: 1vh 0vh 9vh 0vh ;
+	
+}
+.btn, .btn-large {
+    text-decoration: none;
+    color: #26a69a;
+    background-color: #fafafa;
+    text-align: center;
+    letter-spacing: .5px;
+    -webkit-transition: .2s ease-out;
+    transition: .2s ease-out;
+    cursor: pointer;
+    padding: 0vh 6vh;
+    border: 0.2vh solid #26a69a;
+    border-radius: 10px;
+}
+.btn:hover {
+color: white;
+}
+
+
+/*--------  /mod2 -----------*/
+
+
+/*--------  mod3 -----------*/
+
+
+.mod3{
+	background: #E8E8E8;
+	padding: 3vh;
+	
+}
+.mod3 .row .col.m4{
+    background: white;
+    margin: 5px;
+    padding: 40px 10px;
+	 width: 32.3333333333%;
+	border-radius: 10px;
+	
+}
+
+
+/*--------  /mod3 -----------*/
+.textoh1{
+    font-size: 32px;
+    font-family: "Dosis", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    color: #febd40;
+    text-transform: uppercase;
+    line-height: 36px !important;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+.mod3-cor{
+	text-align : justify;
+}
+
+
+
+/*--------  footer -----------*/
+
+/*--------  footer -----------*/
+
+
+@media only screen and (max-width: 1024px){
+.row .col.m4 {
+    width: 49.3333333333%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+}
+	
+.row .col.m6 {
+    width: 100%;
+}	
+
+}
+
+@media only screen and (max-width: 700px){
+.row .col.m4 {
+    width: 100.3333333333%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+}
+.mod3 .row .col.m4{	
+width: 90.3333333333%;
+}
+}

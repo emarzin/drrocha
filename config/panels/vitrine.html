@@ -1,0 +1,39 @@
+{% if produtos.length > 0%}
+
+{% for produto in produtos %}
+
+{% if produto.activate == "true" %}
+
+    <div class="col-sm-3 margin-b20" id="div">
+
+        {% if produto.keyword != "" %}
+            <img class="img-responsive img-center margin-b10" src="images/produtos/{{ produto.keyword }}/thumb.jpg" alt=""/>
+        {% else %}
+            <img class="img-responsive img-center margin-b10" src="images/produtos/thumb.jpg" alt=""/>
+        {% endif %}
+
+        <p class="margin-b10" style="word-wrap: break-word; height: 145px; text-align: justify;">
+            {{ produto.description.substring(0,255) }}
+        </p>
+
+        <div style="width:100%;">
+            <a href="{{ produto.url_description }}" class="btn btn-success btn-block" style="float:left;margin-top: 0px;" target="_blank">
+                MAIS INFORMAÇÕES <i class="fa fa-search"></i>
+            </a>
+            <a href="{{ produto.url_venda }}" class="btn btn-ca btn-block" style="float:left;margin-left:4px;margin-top: 0px;" target="_blank">
+                COMPRAR AGORA  <i class="fa fa-credit-card"></i>
+            </a>
+        </div>
+
+    </div>
+
+{% endif %}
+
+{% endfor %}
+
+{% else %}
+
+<p><h2>Você não tem nenhum produto ativo no momento.</h2></p>
+
+{% endif %}
+

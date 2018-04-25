@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <meta name="keywords" content="">
+    <meta name="description" content="Área de Membros | Life Bee">
+    <meta name="robots" content="noindex, nofollow">
+
+    <link rel="shortcut icon" href="images/icons/favicon.ico">
+    <link rel="apple-touch-icon" href="images/icons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/icons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/icons/apple-touch-icon-114x114.png">
+
+    <title>Área de Membros</title>
+
+
+
+</head>
+
+<body data-spy="scroll" data-offset="400">
+
+
+
+<div class="navbar navbar-default" style="background-color: #ffffff;">
+    <div class="navbar-header pull-left">
+        <img id="logomembers" src="images/drrocha_logo.png" alt=""/>
+    </div>
+
+    <div class="navbar-header pull-right" id="navbarright">
+        <ul class="nav navbar-nav navbar-right" style="margin: 0;">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"
+                   style="font-size: 20px; line-height: 1.42857143; padding-top: 28px; padding-bottom: 0; padding-right: 5px; color: #ffffff;">
+                    <i class="fa fa-user-circle-o"></i> <span class="firstname"></span> <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a id="btnAccount" href="#">Minha Conta</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li>
+                        <a id="btnLogout" href="#">
+                            <span id="btnLogoutLabel">Sair</span> &nbsp<i class="fa fa-sign-out"></i>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+<section class="white-bg" id="conteudo">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+
+                <div class="tabbable-panel">
+                    <div class="tabbable-line">
+                        <ul class="nav nav-tabs">
+
+                            <li>
+                                <a href="#tab_vitrine" data-toggle="tab">
+                                    Vitrine
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#tab_produtos" data-toggle="tab">
+                                    Meus Produtos
+                                </a>
+                            </li>
+
+                            <!--
+                            <li>
+                                <a href="#tab_conquistas" data-toggle="tab">
+                                    Minhas Conquistas
+                                </a>
+                            </li>
+
+
+
+                            <li>
+                                <a href="#tab_nova" data-toggle="tab">
+                                    Nossos Produtos (TESTE PARA GAMEFICAÇÃO)
+                                </a>
+                            </li>
+                            -->
+
+                        </ul>
+
+
+                        <div class="tab-content">
+                            <div class="tab-pane" id="tab_vitrine">
+                                <div id="div_vitrine"></div>
+                            </div>
+
+                            <div class="tab-pane" id="tab_produtos">
+                                <div id="div_produtos"></div>
+                            </div>
+
+                            <div class="tab-pane" id="tab_conquistas">
+                                <div class="col-sm-3 margin-b20">
+                                    <img class="img-responsive img-center" src="/images/medalhas/med_bemvindo.png" alt=""/>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane" id="tab_nova">
+                                <div id="div_nova"></div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- CSS files -->
+{% if (env == 'development') %}
+    {% for file in assets.main.css %}
+        <link rel="stylesheet" href="{{ file }}">
+    {% endfor %}
+{% endif %}
+
+
+{% if (env == 'production') %}
+    <link rel="stylesheet" href="/build/css/main.min.css">
+{% endif %}
+
+<link href="https://fonts.googleapis.com/css?family=Lato:400,300,700,900" rel="stylesheet" type="text/css" />
+
+
+
+<!-- JS files -->
+{% if (env == 'development') %}
+    {% for file in assets.main.js %}
+        <script type="text/javascript" src="{{file}}"></script>
+    {% endfor %}
+    {% for file in assets.main.membersjs %}
+        <script type="text/javascript" src="{{file}}"></script>
+    {% endfor %}
+{% endif %}
+
+
+{% if (env == 'production') %}
+<script type="text/javascript" src="/build/js/main.min.js"></script>
+<script type="text/javascript" src="/build/js/members.min.js"></script>
+{% endif %}
+
+
+
+
+<!--
+<script src="https://player.vimeo.com/api/player.js"></script>
+-->
+
+
+
+</body>
+
+</html>

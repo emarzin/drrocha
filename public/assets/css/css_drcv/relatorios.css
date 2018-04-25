@@ -1,0 +1,77 @@
+
+
+/* --- css padrao ----- */
+.logo{
+	margin-top: 3vh;
+	margin-bottom: 3vh;
+}
+
+p{
+    text-align: justify;
+    font-size: 20px;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #444;
+    font-weight: normal;
+    line-height: 1.5em;
+    letter-spacing: -0.5px;
+    margin-top: 25px;
+    margin-left: 7vmin;
+    margin-right: 7vmin;
+    margin-bottom: 25px;
+	   
+}
+
+h4 {
+    font-size: 24px;
+    color: #2da5b2;
+    font-weight: bold;
+    line-height: 1.5em;
+    letter-spacing: -0.5px;
+    margin-top: 20px;
+    margin-left: 7vmin;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+
+.rodape{
+    border-top: 4px solid #2da5b2;
+	padding-top: 5vh;
+	padding-bottom: 5vh;
+	margin-top: 5vh;
+   
+}
+.btn-inicio .inicio{
+color:#febd40;
+font-size: 17px;
+
+}
+.btn-inicio .inicio:hover{
+
+	text-decoration:underline;
+}
+
+
+
+
+/* --- / css padrao ----- */
+
+
+
+
+/* --- material 1 relatorio 1----- */
+/* --- / material 1 relatorio 1----- */
+
+
+
+/* --- material 1 relatorio 2----- */
+/* --- / material 1 relatorio 2----- */
+
+
+/* --- material 1 relatorio 2----- */
+/* --- / material 1 relatorio 2----- */
+
+
+
+
+

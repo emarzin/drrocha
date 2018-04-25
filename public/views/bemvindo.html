@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <meta name="keywords" content="">
+    <meta name="description" content="Área de Membros">
+    <meta name="robots" content="index, follow">
+
+    <link rel="shortcut icon" href="images/icons/favicon.ico">
+    <link rel="apple-touch-icon" href="images/icons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/icons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/icons/apple-touch-icon-114x114.png">
+
+    <title>
+        Portal Dr. Rocha | Área de Membros
+    </title>
+
+    <!-- CSS files -->
+    {% if (env == 'development') %}
+    {% for file in assets.main.css %}
+    <link rel="stylesheet" href="{{ file }}">
+    {% endfor %}
+    {% endif %}
+
+    {% if (env == 'production') %}
+    <link rel="stylesheet" href="/build/css/main.min.css">
+    {% endif %}
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,300,700,900" rel="stylesheet" type="text/css" />
+
+</head>
+
+
+
+<body data-spy="scroll" data-offset="400">
+
+
+<div class="navbar navbar-default" style="background-color: #ffffff;">
+    <div class="navbar-header pull-left">
+        <img id="logomembers" class="img-responsive img-center" src="images/drrocha_logo.png" alt=""/>
+    </div>
+
+    <div class="navbar-header pull-right" id="navbarright">
+
+    </div>
+</div>
+
+
+<section class="white-bg padding-top-bottom">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-10 col-sm-offset-1">
+                <h1 class="text-center text-bold greenbee">
+                    Bem-vindo(a), <span id="firstname"></span>!
+                </h1>
+            </div>
+
+            <div class="col-sm-6 col-sm-offset-3">
+                <p>
+                    Por favor, confirme seus dados de acesso abaixo:
+                </p>
+
+                <div class="form-group form-group-lg">
+                    <label for="name" class="control-label">Seu Nome Completo</label>
+                    <input type="text" id="name" name="name" class="form-control margin-b10"
+                           placeholder="Seu nome completo" required />
+                </div>
+
+                <div class="form-group form-group-lg">
+                    <label for="name" class="control-label">Seu E-mail</label>
+                    <input type="email" id="email" name="email" class="form-control margin-b10"
+                           placeholder="Seu email" required />
+                </div>
+
+                <div class="form-group form-group-lg">
+                    <label for="name" class="control-label">Seu WhatsApp com DDD</label>
+                    <input type="text" id="celular" name="celular" class="form-control margin-b10"
+                           placeholder="Seu WhatsApp" required/>
+                </div>
+
+                <p id="errUpdate" class="red text-bold text-center margin-b5 margin-t0"></p>
+
+                <button id="btnUpdate" class="btn btn-primary btn-lg btn-block btn-responsive margin-b50">
+                    <span id="btnUpdateLabel"></span> <i id="btnUpdateSpinner" class="fa fa-spinner fa-pulse fa-fw"></i>
+                </button>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+
+
+<!-- JS files -->
+{% if (env == 'development') %}
+{% for file in assets.main.js %}
+<script type="text/javascript" src="{{file}}"></script>
+{% endfor %}
+{% for file in assets.main.bemvindojs %}
+<script type="text/javascript" src="{{file}}"></script>
+{% endfor %}
+{% endif %}
+
+{% if (env == 'production') %}
+<script type="text/javascript" src="/build/js/main.min.js"></script>
+<script type="text/javascript" src="/build/js/bemvindo.min.js"></script>
+{% endif %}
+
+
+
+
+
+</body>
+
+</html>

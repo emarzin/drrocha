@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <meta name="keywords" content="">
+    <meta name="description" content="Bem + Mulher">
+    <meta name="robots" content="noindex, nofollow">
+
+    <link rel="shortcut icon" href="/images/produtos/{{ keyword }}/icons/favicon.ico">
+    <link rel="apple-touch-icon" href="/images/produtos/{{ keyword }}/icons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/produtos/{{ keyword }}/icons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/produtos/{{ keyword }}/icons/apple-touch-icon-114x114.png">
+
+    <title>
+        Bem + Mulher
+    </title>
+
+
+
+
+</head>
+
+
+
+<body data-spy="scroll" data-offset="400">
+
+
+<div class="navbar navbar-default" style="background-color: #ffffff;">
+    <div class="navbar-header pull-left">
+        <img id="logoproduto" class="img-responsive img-center" src="/images/produtos/{{ keyword }}/logo.png" alt=""/>
+        <div class="clearfix"></div>
+        <a class="backarrow" href="" onclick="window.history.go(-1); return false;">
+            <i class="fa fa-chevron-left"></i> VOLTAR
+        </a>
+    </div>
+
+    <div class="navbar-header pull-right" style="color: #000000;">
+        <p style="text-transform: uppercase; font-size: 20px; line-height: 1.42857143; padding-top: 10px; padding-bottom: 0; margin-right: 25px; margin-bottom: 0; font-weight: bold;">
+            <span style="color: #89008d;">Bem +</span> <span class="firstname" style="color: #b3aaf6;"></span>
+        </p>
+        <p>
+            Seja bem-vinda! <h1>MODEL 2</h1>
+        </p>
+    </div>
+</div>
+
+
+
+<section class="white-bg" style="margin-top: 30px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 margin-b30">
+                <h2 class="purple margin-b20">
+                    Resumo do 1<sup>o</sup> Relatório
+                </h2>
+
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe src="https://player.vimeo.com/video/229558801?autoplay=false"
+                            style=" border: 10px solid #b3aaf6; border-radius: 5px;"
+                            width="640" height="360"
+                            frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="col-sm-4 margin-b20">
+                <h2 class="purple margin-b10">
+                    Bônus
+                </h2>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-sm-12 margin-b10">
+                <h2 class="purple margin-b10">
+                    Relatórios
+                </h2>
+            </div>
+
+            <div class="col-sm-4 margin-b20">
+                <a class="btnOpenConteudo hand-cursor" modulo="modulo_1" conteudo="relatorio_1">
+                    <img class="img-responsive img-center margin-b10" src="/images/produtos/{{ keyword }}/modulo_1/relatorio_1.png" alt=""/>
+                </a>
+
+                <button id="btn_relatorio_1" modulo="modulo_1" conteudo="relatorio_1"
+                        class="btn btn-purple btnOpenConteudo btn-block btn-responsive">
+                    ACESSAR <i class="fa fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <div class="col-sm-4 margin-b20">
+                <a class="btnOpenConteudo hand-cursor" modulo="modulo_1" conteudo="relatorio_2">
+                    <img class="img-responsive img-center margin-b10" src="/images/produtos/{{ keyword }}/modulo_1/relatorio_2.png" alt=""/>
+                </a>
+
+                <button id="btn_relatorio_2" modulo="modulo_1" conteudo="relatorio_2"
+                        class="btn btn-purple btnOpenConteudo btn-block btn-responsive">
+                    ACESSAR <i class="fa fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <div class="col-sm-4 margin-b20">
+                <a class="btnOpenConteudo hand-cursor" modulo="modulo_1" conteudo="relatorio_3">
+                    <img class="img-responsive img-center margin-b10" src="/images/produtos/{{ keyword }}/modulo_1/relatorio_3.png" alt=""/>
+                </a>
+
+                <button id="btn_relatorio_3" modulo="modulo_1" conteudo="relatorio_3"
+                        class="btn btn-purple btnOpenConteudo btn-block btn-responsive">
+                    ACESSAR <i class="fa fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
+
+
+
+
+<footer id="main-footer" class="white-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <img class="img-responsive img-center margin-b20" src="/images/produtos/{{ keyword }}/logo.png" alt=""/>
+
+                <p class="text-center">
+                    Portal Dr. Rocha 2017
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<!-- CSS files -->
+{% if (env == 'development') %}
+{% for file in assets.main.css %}
+<link rel="stylesheet" href="{{ file }}">
+{% endfor %}
+{% endif %}
+
+{% if (env == 'production') %}
+<link rel="stylesheet" href="/build/css/main.min.css">
+{% endif %}
+
+<link href='//fonts.googleapis.com/css?family=Lato:400,300,700,900' rel='stylesheet' type='text/css'>
+
+
+
+<!-- JS files -->
+{% if (env == 'development') %}
+{% for file in assets.main.js %}
+<script type="text/javascript" src="{{file}}"></script>
+{% endfor %}
+{% for file in assets.main.bmm_modulojs %}
+<script type="text/javascript" src="{{file}}"></script>
+{% endfor %}
+{{file}}
+{% endif %}
+
+{% if (env == 'production') %}
+<script type="text/javascript" src="/build/js/main.min.js"></script>
+<script type="text/javascript" src="/build/js/produtos/bem_mais_mulher/modulo.min.js"></script>
+{% endif %}
+
+
+
+</body>
+
+</html>

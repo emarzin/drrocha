@@ -1,0 +1,31 @@
+
+
+{% if produtos.length > 0 %}
+    {% for produto in produtos %}
+            {% if produto.status == 'expired' %}
+                    <p style="text-transform: uppercase">SEU PRODUTO ESTÁ COM STATUS DE EXPIRADO, ENTRE EM CONTATO COM NOSSO SUPORTE</p>
+            {% elseif produto.status == 'refunded' %}
+                    <p style="text-transform: uppercase">SEU PRODUTO ESTÁ EM STATUS DE DEVOLUÇÃO, ENTRE EM CONTATO COM NOSSO SUPORTE</p>
+            {% else %}
+                    <div class="col-sm-3 margin-b20">
+                        <img class="img-responsive img-center margin-b10" src="images/produtos/{{ produto.produtoid.keyword }}/thumb.jpg" alt=""/>
+
+                        <!--
+                        <h3 class="greenbee text-bold margin-b5">
+                            {{ produto.produtoid.nome }}
+                        </h3>
+                        -->
+
+                        <p class="margin-b10" style="word-wrap: break-word; height: 130px; text-align: justify;">
+                            {{ produto.produtoid.description.substring(0, 255) }}
+                        </p>
+
+                        <button href="{{ produto.produtoid.keyword }}"  style="float: right; font-size: 10px; width: 100%;" target="_blank" class="btn btn-success btnOpenProduto btn-block btn-responsive">
+                            <i class="fa fa-book"></i> Acesso ao Conteúdo
+                        </button>
+                    </div>
+            {% endif %}
+    {% endfor %}
+{% else %}
+    <p style="font-size: 17px; font-weight: bold"> Você não possui nenhum produto ativo no momento. </p>
+{% endif %}

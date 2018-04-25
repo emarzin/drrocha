@@ -1,0 +1,127 @@
+{
+  "main": {
+    "css": {
+      "public/build/css/main.min.css": [
+        "public/assets/css/bootstrap.css",
+        "public/assets/css/font-awesome.css",
+        "public/assets/css/magnific-popup.css",
+        "public/assets/css/animate.css",
+        "public/assets/css/flipclock.css",
+        "public/assets/css/main.css"
+      ]
+    },
+    "css_drcv": {
+      "public/build/css/main.min.css": [
+        "public/assets/css/css_drcv/materialize.min.css",
+        "public/assets/css/css_drcv/estilo.css"
+      ]
+    },
+    "css_drcv_mod": {
+      "public/build/css/main.min.css": [
+        "public/assets/css/css_drcv/materialize.min.css",
+        "public/assets/css/css_drcv/materiais.css"
+      ]
+    },
+    "css_drcv_rel": {
+      "public/build/css/main.min.css": [
+        "public/assets/css/css_drcv/materialize.min.css",
+        "public/assets/css/css_drcv/estilo.css",
+        "public/assets/css/css_drcv/relatorios.css"
+      ]
+    },
+
+    "js": {
+      "public/build/js/main.min.js": [
+        "public/assets/js/libs/jquery-2.2.4.min.js",
+        "public/assets/js/libs/bootstrap.js",
+        "public/assets/js/libs/js.storage.js",
+        "public/assets/js/libs/progressbar.js",
+        "public/assets/js/libs/flipclock.js",
+        "public/assets/js/libs/jquery.mask.js",
+        "public/assets/js/libs/jquery.magnific-popup.js"
+      ]
+    },
+    "indexjs": {
+      "public/build/js/index.min.js": [
+        "public/assets/js/pages/index.js"
+      ]
+    },
+    "loginjs": {
+      "public/build/js/login.min.js": [
+        "public/assets/js/pages/login.js"
+      ]
+    },
+    "bemvindojs": {
+      "public/build/js/bemvindo.min.js": [
+        "public/assets/js/pages/bemvindo.js"
+      ]
+    },
+    "contajs": {
+      "public/build/js/conta.min.js": [
+        "public/assets/js/pages/conta.js"
+      ]
+    },
+    "unsubscribejs": {
+      "public/build/js/unsubscribe.min.js": [
+        "public/assets/js/pages/unsubscribe.js"
+      ]
+    },
+    "membersjs": {
+      "public/build/js/members.min.js": [
+        "public/assets/js/pages/members.js"
+      ]
+    },
+    "forgotjs": {
+      "public/build/js/forgot.min.js": [
+        "public/assets/js/pages/forgot.js"
+      ]
+    },
+    "resetjs": {
+      "public/build/js/reset.min.js": [
+        "public/assets/js/pages/reset.js"
+      ]
+    },
+
+    "bmm_produtojs": {
+      "public/build/js/produtos/bem_mais_mulher/produto.min.js": [
+        "public/assets/js/produtos/bem_mais_mulher/produto.js"
+      ]
+    },
+    "bmm_modulojs": {
+      "public/build/js/produtos/bem_mais_mulher/modulo.min.js": [
+        "public/assets/js/produtos/bem_mais_mulher/modulo.js"
+      ]
+    },
+    "bmm_relatoriojs": {
+      "public/build/js/produtos/bem_mais_mulher/relatorio.min.js": [
+        "public/assets/js/produtos/bem_mais_mulher/relatorio.js"
+      ]
+    },
+    "bmm_obrigadojs": {
+      "public/build/js/produtos/bem_mais_mulher/obrigado.min.js": [
+        "public/assets/js/produtos/bem_mais_mulher/obrigado.js"
+      ]
+    },
+
+    "drcv_produtojs": {
+      "public/build/js/produtos/drrocha_com_voce/produto.min.js": [
+        "public/assets/js/produtos/drrocha_com_voce/produto.js"
+      ]
+    },
+    "drcv_modulojs": {
+      "public/build/js/produtos/drrocha_com_voce/modulo.min.js": [
+        "public/assets/js/produtos/drrocha_com_voce/modulo.js"
+      ]
+    },
+    "drcv_relatoriojs": {
+      "public/build/js/produtos/drrocha_com_voce/relatorio.min.js": [
+        "public/assets/js/produtos/drrocha_com_voce/relatorio.js"
+      ]
+    }
+
+
+
+
+
+  }
+}

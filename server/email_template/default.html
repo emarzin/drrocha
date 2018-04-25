@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+
+
+<div dir="ltr">
+
+    {% if fotoTop %}
+    <img src="{{ fotoTop }}" alt="" style="display: block; margin: 0 auto 20px auto;" />
+    {% endif %}
+
+    {% for frase in frases %}
+    <div style="line-height: 1.3;">
+        <font size="4">{{ frase | safe }}</font>
+    </div>
+
+    <div>
+        <font size="4"><br></font>
+    </div>
+    {% endfor %}
+
+
+    <div>
+        <font size="3">
+            <br><br><br>
+            Caso não queira mais receber minhas mensagens de saúde e bem-estar, basta clicar aqui:
+            <a href="{{ unsubscribeUrl }}" target="_blank">Não Quero Mais Receber Dicas de Saúde</a>.
+        </font>
+    </div>
+
+</div>
+
+
+
+</body>
+</html>

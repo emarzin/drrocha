@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <meta name="keywords" content="">
+    <meta name="description" content="Área de Membros">
+    <meta name="robots" content="index, follow">
+
+    <link rel="shortcut icon" href="images/icons/favicon.ico">
+    <link rel="apple-touch-icon" href="images/icons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/icons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/icons/apple-touch-icon-114x114.png">
+
+    <title>
+        Portal Dr. Rocha | Área de Membros
+    </title>
+
+    <!-- CSS files -->
+    {% if (env == 'development') %}
+    {% for file in assets.main.css %}
+    <link rel="stylesheet" href="{{ file }}">
+    {% endfor %}
+    {% endif %}
+
+    {% if (env == 'production') %}
+    <link rel="stylesheet" href="/build/css/main.min.css">
+    {% endif %}
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,300,700,900" rel="stylesheet" type="text/css" />
+
+</head>
+
+
+
+<body data-spy="scroll" data-offset="400">
+
+
+<div class="navbar navbar-default" style="background-color: #ffffff;">
+    <div class="navbar-header pull-left">
+        <img id="logomembers" class="img-responsive img-center" src="images/drrocha_logo.png" alt=""/>
+    </div>
+
+    <div class="navbar-header pull-right" id="navbarright">
+
+    </div>
+</div>
+
+
+<section class="white-bg padding-top-bottom">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-10 col-sm-offset-1">
+                <h1 class="text-center text-bold greenbee">
+                    Acesso ao Portal
+                </h1>
+
+                <div class="pull-right">
+                    <p>
+                        <a href="" target="_blank" style="display: none;">
+                            <i class="fa fa-question-circle orange"></i> Dúvidas Frequentes
+                        </a>
+                        &nbsp;&nbsp;
+                        <a href="http://www.drrocha.com.br" target="_blank">
+                            <i class="fa fa-desktop orange"></i> Acesso ao Blog
+                        </a>
+                    </p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+
+            <div class="col-sm-6 col-sm-offset-3">
+                <p>
+                    <span class="text-bold">Digite seu email e a senha cadastrados.</span><br />
+                    <!--Esqueceu sua senha? <a id="forgotlink" style="cursor: pointer;">Clique aqui para recuperá-la!</a>-->
+                </p>
+
+                <form id="formEmailModal">
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" class="form-control margin-b10"
+                               placeholder="Seu email cadastrado" required />
+
+                        <input type="password" id="password" name="password" class="form-control margin-b10"
+                               placeholder="Sua senha" required />
+                    </div>
+                </form>
+
+
+                <p id="errEmail" class="red text-bold text-center margin-b5 margin-t0"></p>
+
+                <button id="btnLogin" style="margin-left: 52%" class="btn btn-primary btn-lg btn-block btn-responsive margin-b50">
+                    <span id="btnLoginLabel"></span> <i id="btnLoginSpinner" class="fa fa-spinner fa-pulse fa-fw"></i>
+                </button>
+
+                <p class="text-center margin-b20">
+                    <span id="siteseal"><script async type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=ywruEM6E5790Zs0xiL9pGpGGPfEBD6uq2AAsCMCuLkajclMza3VjtRSKG4tW"></script></span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+
+<footer id="main-footer" class="white-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+                <p>
+                    <b>Atenção:</b> os dados de acesso ao treinamento são pessoais e intransferíveis, não é autorizado o compartilhamento.
+                    Para sua segurança, caso o sistema identifique outras pessoas usando seus dados de acessos para entrar
+                    no treinamento, a plataforma irá por medidas de segurança bloquear o acesso.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+<!-- JS files -->
+{% if (env == 'development') %}
+{% for file in assets.main.js %}
+<script type="text/javascript" src="{{file}}"></script>
+{% endfor %}
+{% for file in assets.main.loginjs %}
+<script type="text/javascript" src="{{file}}"></script>
+{% endfor %}
+{% endif %}
+
+{% if (env == 'production') %}
+<script type="text/javascript" src="/build/js/main.min.js"></script>
+<script type="text/javascript" src="/build/js/login.min.js"></script>
+{% endif %}
+
+
+
+
+
+</body>
+
+</html>

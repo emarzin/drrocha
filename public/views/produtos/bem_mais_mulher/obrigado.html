@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <meta name="keywords" content="">
+    <meta name="description" content="Obrigado pela sua Escolha.">
+    <meta name="robots" content="noindex, nofollow">
+
+    <link rel="shortcut icon" href="/images/produtos/{{ keyword }}/icons/favicon.ico">
+    <link rel="apple-touch-icon" href="/images/produtos/{{ keyword }}/icons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/produtos/{{ keyword }}/icons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/produtos/{{ keyword }}/icons/apple-touch-icon-114x114.png">
+
+    <title>
+        Parabéns!
+    </title>
+
+
+
+
+</head>
+
+
+
+<body data-spy="scroll" data-offset="400">
+
+
+<div class="navbar navbar-default" style="background-color: #ffffff;">
+    <div class="navbar-header pull-left">
+        <img id="logoproduto" class="img-responsive img-center" src="/images/produtos/bem_mais_mulher/logo.png" alt=""/>
+    </div>
+
+    <div class="navbar-header pull-right" style="color: #000000;">
+
+    </div>
+</div>
+
+
+
+<section class="white-bg padding-top-bottom">
+    <div class="container">
+        <div class="col-md-offset-2 col-md-8 margin-b170">
+            <p class="margin-b10 text-center">
+                Página de obrigado
+            </p>
+
+
+            <div style="text-align: center;" class="margin-t30 margin-b30">
+                <div class="clock" style="display: inline-block; width: auto;"></div>
+            </div>
+
+            <h2 id="cmd" class="red3 text-bold text-center" style="display: none;">
+                Em instantes você vai receber um E-Mail e um SMS com os dados de acesso ao Portal Dr. Rocha.
+            </h2>
+
+
+        </div>
+    </div>
+</section>
+
+
+
+<footer id="main-footer" class="white-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <img class="img-responsive img-center margin-b20" src="/images/produtos/{{ keyword }}/logo.png" alt=""/>
+
+                <p class="text-center">
+                    Portal Dr. Rocha 2017
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+<!-- CSS files -->
+{% if (env == 'development') %}
+{% for file in assets.main.css %}
+<link rel="stylesheet" href="{{ file }}">
+{% endfor %}
+{% endif %}
+
+{% if (env == 'production') %}
+<link rel="stylesheet" href="/build/css/main.min.css">
+{% endif %}
+
+<link href='//fonts.googleapis.com/css?family=Lato:400,300,700,900' rel='stylesheet' type='text/css'>
+
+
+<!-- JS files -->
+{% if (env == 'development') %}
+{% for file in assets.main.js %}
+<script type="text/javascript" src="{{file}}"></script>
+{% endfor %}
+{% for file in assets.main.bmm_obrigadojs %}
+<script type="text/javascript" src="{{file}}"></script>
+{% endfor %}
+{% endif %}
+
+{% if (env == 'production') %}
+<script type="text/javascript" src="/build/js/main.min.js"></script>
+<script type="text/javascript" src="/build/js/produtos/bem_mais_mulher/obrigado.min.js"></script>
+{% endif %}
+
+
+
+</body>
+
+</html>

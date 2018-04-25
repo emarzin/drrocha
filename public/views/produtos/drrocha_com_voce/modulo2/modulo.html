@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <meta name="keywords" content="">
+    <meta name="description" content="Dr Rocha com Você">
+    <meta name="robots" content="noindex, nofollow">
+
+    <link rel="shortcut icon" href="/images/produtos/{{ keyword }}/icons/favicon.ico">
+    <link rel="apple-touch-icon" href="/images/produtos/{{ keyword }}/icons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/produtos/{{ keyword }}/icons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/produtos/{{ keyword }}/icons/apple-touch-icon-114x114.png">
+	
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col s12 logo">
+                <img src="/images/produtos/drrocha_com_voce/imagens/logo-drcomvc.png">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <hr>
+    </div>
+
+    <div class="container">
+        <div class="col s12 btn-inicio">
+            <a href="javascript:window.history.go(-1)" class="inicio"> Inicio > </a>  MATERIAL 2º
+
+            <div class="row mod-1">
+                <div class="col s12 m8 center-align">
+                    <div class="row mod-assuntos">
+                        <div class="col s12 m4 ">
+                            <div class="col s12">
+                                <img src="/images/produtos/drrocha_com_voce/imagens/material1/mat2-img1.png">
+                            </div>
+                            <div class="col s12 center-align">
+								<a class="btnOpenConteudo waves-effect waves-light btn" modulo="modulo2" conteudo="relatorio1">1° RELATÓRIO</a>
+                            </div>
+
+                        </div>
+                        <div class="col s12 m4 ">
+                            <div class="col s12 center-align">
+                                <img src="/images/produtos/drrocha_com_voce/imagens/material1/mat2-img2.png">
+                            </div>
+                            <div class="col s12 center-align">
+                                <a class="btnOpenConteudo waves-effect waves-light btn" modulo="modulo2" conteudo="relatorio2">2° RELATÓRIO</a>
+                            </div>
+
+                        </div>
+                        <div class="col s12 m4">
+                            <div class="col s12">
+                                <img src="/images/produtos/drrocha_com_voce/imagens/material1/mat2-img3.png">
+                            </div>
+                            <div class="col s12 center-align">
+                                <a class="btnOpenConteudo waves-effect waves-light btn" modulo="modulo2" conteudo="relatorio3">3° RELATÓRIO</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="row center-align text-informacao">Informações</div>
+                    <div class="row center-align">
+                        <img src="/images/produtos/drrocha_com_voce/imagens/img-suportetecnico-2.png" alt="">
+                    </div>
+                    <div class="row center-align">
+                        <p class="text-mod">O Suporte do Dr. Rocha com você está aqui para ajudar. Envie sua dúvida ou sugestão para o e-mail:
+                            suporte@drrocha.com.br. Em breve você receberá uma resposta via e-mail.</p>
+                    </div>
+                    <div class="row center-align">
+                        <img src="/images/produtos/drrocha_com_voce/imagens/img-reproducaoproibida-1.png" alt="">
+                    </div>
+                    <div class="row center-align">
+                        <p class="text-mod">Atenção: Os dados de acesso ao treinamento são pessoais e intransferíveis, não é autorizado o compartilhamento.
+                            Para sua segurança, caso o sistema identifique outras pessoas usando seus dados de acessos para
+                            entrar no treinamento, a plataforma irá por medidas de segurança bloquear o acesso.</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <hr class="hr-2">
+    <div class="row">
+        <div class="col s12 center-align">
+            <img src="/images/produtos/drrocha_com_voce/imagens/logo-drrocha.png">
+        </div>
+    </div>
+    </footer>
+
+
+
+    <!-- CSS files -->
+    {% if (env == 'development') %}
+    {% for file in assets.main.css_drcv_mod %}
+    <link rel="stylesheet" href="{{ file }}">
+    {% endfor %}
+    {% endif %}
+
+    {% if (env == 'production') %}
+    <!--<link rel="stylesheet" href="/build/css/main.min.css">-->
+    <link rel="stylesheet" href="/build/css/css_drcv/materialize.min.css">
+    <link rel="stylesheet" href="/build/css/css_drcv/materiais.css">
+    {% endif %}
+
+
+
+    <!-- JS files -->
+    {% if (env == 'development') %}
+    {% for file in assets.main.js %}
+    <script type="text/javascript" src="{{file}}"></script>
+    {% endfor %}
+
+    {% for file in assets.main.drcv_modulojs %}
+    <script type="text/javascript" src="{{file}}"></script>
+    {% endfor %}
+    {% endif %}
+
+    {% if (env == 'production') %}
+    <script type="text/javascript" src="/build/js/main.min.js"></script>
+    <script type="text/javascript" src="/build/js/produtos/drcv_modulojs/modulo.min.js"></script>
+
+    <script type="text/javascript" src="/build/js_drrocha/libs/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="/build/js_drrocha/libs/bootstrap.js"></script>
+    <script type="text/javascript" src="/build/js_drrocha/libs/js.storage.js"></script>
+    <script type="text/javascript" src="/build/js_drrocha/libs/progressbar.js"></script>
+    <script type="text/javascript" src="/build/js_drrocha/libs/flipclock.js"></script>
+    <script type="text/javascript" src="/build/js_drrocha/libs/jquery.mask.js"></script>
+    <script type="text/javascript" src="/build/js_drrocha/libs/jquery.magnific-popup.js"></script>
+    <script type="text/javascript" src="/build/js_drrocha/produtos/drrocha_com_voce/modulo.js"></script>
+
+    {% endif %}
+	
+	
+	
+	
+</body>
+
+</html>

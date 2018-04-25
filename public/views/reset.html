@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <meta name="keywords" content="">
+    <meta name="description" content="Recuperação de Senha.">
+    <meta name="robots" content="noindex, nofollow">
+
+    <link rel="shortcut icon" href="images/icons/favicon.ico">
+    <link rel="apple-touch-icon" href="images/icons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/icons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/icons/apple-touch-icon-114x114.png">
+
+    <title>Criar Nova Senha</title>
+
+</head>
+
+
+
+<body data-spy="scroll" data-offset="400">
+
+
+
+<div class="navbar navbar-default" style="background-color: #ffffff;">
+    <div class="navbar-header pull-left">
+        <img id="logomembers" class="img-responsive img-center" src="images/drrocha_logo.png" alt=""/>
+    </div>
+
+    <div class="navbar-header pull-right" style="min-width: 85%; background-color: #00BFC6; min-height: 50px; border-radius: 0 0 0 25px;">
+
+    </div>
+</div>
+
+
+
+<section class="white-bg padding-top-bottom">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+                <h1 class="text-center text-bold greenbee">
+                    Crie uma Nova Senha
+                    <span id="token" style="display: none;">{{ token }}</span>
+                </h1>
+
+                <p>
+                    Informe sua Nova Senha:
+                </p>
+
+                <form id="formSenhaModal">
+                    <div class="form-group form-group-lg">
+                        <label for="password" class="control-label">Senha</label>
+                        <input id="password" type="password" name="password" placeholder="crie uma nova senha"
+                               class="form-control" required/>
+                    </div>
+
+                    <div class="form-group form-group-lg">
+                        <label for="confirmPassword" class="control-label">Repita a Senha</label>
+                        <input id="confirmPassword" type="password" name="confirmPassword" placeholder="repita a nova senha"
+                               class="form-control" required/>
+                    </div>
+                </form>
+
+                <p id="errEmail" class="red text-bold text-center margin-b5 margin-t0"></p>
+
+                <button id="btnResetPass" class="btn btn-primary btn-lg btn-block btn-responsive margin-b5">
+                    <span id="btnResetPassLabel"></span> <i id="btnResetPassSpinner" class="fa fa-spinner fa-pulse fa-fw"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<footer id="main-footer" class="white-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p class="text-center">
+                    Portal Dr. Rocha 2017
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+<!-- CSS files -->
+{% if (env == 'development') %}
+{% for file in assets.main.css %}
+<link rel="stylesheet" href="{{ file }}">
+{% endfor %}
+{% endif %}
+
+{% if (env == 'production') %}
+<link rel="stylesheet" href="/build/css/main.min.css">
+{% endif %}
+
+<link href="https://fonts.googleapis.com/css?family=Lato:400,300,700,900" rel="stylesheet" type="text/css" />
+
+
+<!-- JS files -->
+{% if (env == 'development') %}
+{% for file in assets.main.js %}
+<script type="text/javascript" src="{{file}}"></script>
+{% endfor %}
+{% for file in assets.main.resetjs %}
+<script type="text/javascript" src="{{file}}"></script>
+{% endfor %}
+{% endif %}
+
+{% if (env == 'production') %}
+<script type="text/javascript" src="/build/js/main.min.js"></script>
+<script type="text/javascript" src="/build/js/reset.min.js"></script>
+{% endif %}
+
+
+
+
+
+</body>
+
+</html>
