@@ -19,7 +19,7 @@ var userprodutoSchema = new Schema({
     transacao: {type: String},
     dtpedido: {type: String},
     dtlibcom: {type: String},
-    verifica: {type: String, unique: true}
+    verifica: {type: String}
 });
 
 userprodutoSchema.methods = {
