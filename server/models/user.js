@@ -142,8 +142,6 @@ UserSchema.methods = {
     cadHotmartUser: function(customer, callback){
 
 
-
-
         //mongoose.connect('mongodb://127.0.0.1:27017/mbeedb');//LOCAL
         mongoose.connect('mongodb://127.0.0.1:29099/mbeedb');//SERVIDO
         var user = mongoose.model('user', UserSchema);
@@ -188,9 +186,9 @@ UserSchema.methods = {
 
             }).save(function(err, doc){
                 if(err){
-                    //console.log('COM ERRO');
+                    console.log('USUÁRIO NÃO CADASTRADO');
                 }else{
-                    //console.log('SEM ERRO');
+                    console.log('USUÁRIO ' + doc.name + ', DOCUMENTO: ' + doc.doc + ' CADASTRADO COM SUCESSO.');
                 }
             })
 

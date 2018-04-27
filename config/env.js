@@ -3,8 +3,7 @@
 
 var development = {
     env: 'development',
-    db: 'mongodb://' + (process.env.DB_PORT_29099_TCP_ADDR || '127.0.0.1:29099') + '/mbeedb',
-    //db: 'mongodb://' + (process.env.DB_PORT_29099_TCP_ADDR || '127.0.0.1:27017') + '/mbeedb',
+    db: 'mongodb://' + (process.env.DB_PORT_29099_TCP_ADDR || '127.0.0.1:27017') + '/mbeedb',
     secret: 'Ap3&)m8FInxVp#Lw^0i82!jo3UVMcC$PbM@V)!Z*Om&zIK$KPvKiL[mYVHO^',
     hostname: 'http://127.0.0.1:3008',
     port: '3008',
@@ -36,7 +35,6 @@ var development = {
 var production = {
     env: 'production',
     db: 'mongodb://' + (process.env.DB_PORT_29099_TCP_ADDR || '127.0.0.1:29099') + '/mbeedb',
-    //db: 'mongodb://' + (process.env.DB_PORT_29099_TCP_ADDR || '127.0.0.1:27017') + '/mbeedb',
     secret: 'Ap3&)m8FInxVp#Lw^0i82!jo3UVMcC$PbM@V)!Z*Om&zIK$KPvKiL[mYVHO^',
     hostname: 'http://www.portaldrrocha.com.br',
     port: '3008',

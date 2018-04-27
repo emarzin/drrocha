@@ -22,7 +22,7 @@ var User = require('../models/user'),
     router = express.Router(),
     axios = require('axios');
 var mongoose = require('mongoose');
-var sendgrid = require('sendgrid')(process.env.U, process.env.password);
+//var sendgrid = require('sendgrid')(process.env.U, process.env.password);
 
 
 
@@ -1211,8 +1211,8 @@ module.exports = {
                         if(!cad){
                             console.log('NÃO EXISTE DADOS');
                         }else{
-                            var produto = new Userproduto();
-                            produto.cadHotmartProd(cad);
+                            //var produto = new Userproduto();
+                            //produto.cadHotmartProd(cad);
                         }
                     })
 
@@ -1222,7 +1222,7 @@ module.exports = {
 
         })
 
-    }, 5000)
+    }, 15000)
 
 
     }

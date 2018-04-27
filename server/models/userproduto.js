@@ -26,6 +26,7 @@ userprodutoSchema.methods = {
 
     cadHotmartProd: function(customer, callback){
 
+        /*
         //mongoose.connect('mongodb://127.0.0.1:27017/mbeedb');//LOCAL
         mongoose.connect('mongodb://127.0.0.1:29099/mbeedb');//SERVIDO
         var prod = mongoose.model('userproduto', userprodutoSchema);
@@ -48,12 +49,12 @@ userprodutoSchema.methods = {
 
         }).save(function(err, pro){
             if(err){
-                //console.log("ESTE ERRO -> " + err + " <- FINAL ERRO");
+                console.log("PROD NÃO CADASTRADO");
             }else{
-                //console.log('FUNCIONOU');
+                console.log('PROD CADASTRADDO');
             }
         })
-
+        */
 
     }
 

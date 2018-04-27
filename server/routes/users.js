@@ -43,7 +43,7 @@ module.exports = function(app, auth) {
 
     //HOTMART
     app.get('/hotmart', usersController.hotmartpage);
-    
+
     app.put('/api/unsubscribe', usersController.unsubscribe);
 
     app.get('/forgot', usersController.forgotpage);
