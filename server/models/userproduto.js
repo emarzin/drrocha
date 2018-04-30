@@ -10,7 +10,7 @@ var userprodutoSchema = new Schema({
 
     created: { type: Date, default: Date.now },
     updated: Date,
-    userid: { type: Schema.Types.ObjectId, ref: 'User' },
+    userid: { type: Schema.Types.ObjectId, ref: 'User', unique: true },
     produtoid: { type: Schema.Types.ObjectId, ref: 'Produto' },
     produtokey: String,
     active: { type: Boolean, default: true },
@@ -26,7 +26,7 @@ userprodutoSchema.methods = {
 
     cadHotmartProd: function(customer, callback){
 
-        /*
+
         //mongoose.connect('mongodb://127.0.0.1:27017/mbeedb');//LOCAL
         mongoose.connect('mongodb://127.0.0.1:29099/mbeedb');//SERVIDO
         var prod = mongoose.model('userproduto', userprodutoSchema);
@@ -49,12 +49,12 @@ userprodutoSchema.methods = {
 
         }).save(function(err, pro){
             if(err){
-                console.log("PROD NÃO CADASTRADO");
+                console.log("PROD NÃO CADASTRADO / JÁ POSSUI");
             }else{
-                console.log('PROD CADASTRADDO');
+                console.log('PROD CADASTRADO');
             }
         })
-        */
+
 
     }
 

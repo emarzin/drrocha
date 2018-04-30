@@ -1116,22 +1116,6 @@ module.exports = {
                 cadusu(newarray[dado_separado]);
             }
 
-
-            function teste(dado){
-                Userproduto.findOne({'userid' : acerto[0]._id}, function(err, dprod){
-                    if(err){
-                        console.log('erro');
-                    }else{
-                        console.log('aqui');
-                        console.log(dprod);
-                        dprod.status    = dados.status;
-                        dprod.transacao = dados.transacao;
-                        dprod.dtpedido  = dados.dt_pedido;
-                        dprod.save();
-                    }
-                })
-            }
-
             function cadusu(requisito) {
 
                 if(requisito.status == 'approved' || requisito.status == 'refunded' || requisito.status == 'expired'){
@@ -1212,8 +1196,8 @@ module.exports = {
                         if(!cad){
                             console.log('NÃO EXISTE DADOS');
                         }else{
-                            //var produto = new Userproduto();
-                            //produto.cadHotmartProd(cad);
+                            var produto = new Userproduto();
+                            produto.cadHotmartProd(cad);
                         }
                     })
 
