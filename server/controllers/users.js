@@ -23,6 +23,7 @@ var User = require('../models/user'),
     axios = require('axios');
 var mongoose = require('mongoose');
 //var sendgrid = require('sendgrid')(process.env.U, process.env.password);
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
 
 
 
@@ -906,7 +907,7 @@ module.exports = {
         var dados;
 
         function usuarioHotmart() {
-            return axios.post("https://drrocha.com.br/callbacks/posteste.txt");
+            return axios.post("https://www.drrocha.com.br/callbacks/posteste.txt");
         }
 
         dados = usuarioHotmart();
